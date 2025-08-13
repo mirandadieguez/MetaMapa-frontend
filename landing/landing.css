@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header.main-header {
+    background: #004080;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center; padding: 1rem; margin-top: 3rem;
+    background: #f3f3f3; font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-title{
+    font-size: 45px;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+
+.landing-subtitle{
+    text-align: center;
+    font-weight: 100;
+}
+
+.landing-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0px 100px 0px;
+    background-color: #f7f9fa;
+}
+
+.call-to-action-buttons button{
+    border-radius: none;
+    padding: 10px 20px;
+    margin: 0px 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-login{
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-explorar{
+    background-color: transparent;
+
+}
+
+.colecciones-destacadas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.coleccion-destacada{
+    background-color: #f7f9fa;
+    padding: 20px;
+    border: 1px solid #9196a1;
+}
+
+.destacados{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.destacados h2{
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+}
