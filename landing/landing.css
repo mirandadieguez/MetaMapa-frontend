@@ -69,6 +69,7 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 20px;
 }
 
 .coleccion-destacada{
@@ -87,4 +88,19 @@ footer {
     margin-top: 0px;
     display: flex;
     justify-content: center;
+}
+
+
+
+.hechos-destacados{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.hecho-destacado{
+    background-color: #f7f9fa;
+    padding: 20px;
+    border: 1px solid #9196a1;
 }
