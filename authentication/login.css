@@ -10,10 +10,13 @@
 
 .form-container {
     background-color: #fff;
-    padding: 40px;
+    padding: 80px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-container h2 {
@@ -22,13 +25,20 @@
 }
 
 .form-group {
-    margin-bottom: 15px;
+    background-color: white;
+    padding: 30px 40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 320px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
 .form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .form-group input, .form-group select {
@@ -48,10 +58,34 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    margin-top: 30px;
 }
 
 .btn-submit:hover {
     background-color: #555;
     }
+
+.logo-placeholder {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.cambiar-text {
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.password-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
