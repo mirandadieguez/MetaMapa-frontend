@@ -19,7 +19,7 @@ header .logo {
 }
 
 footer {
-    text-align: center; padding: 1rem; margin-top: 3rem;
+    text-align: center; padding: 2rem; margin-top: 3rem;
     background: #f3f3f3; font-size: 0.9rem;
     display: flex;
     flex-direction: row;
@@ -44,6 +44,7 @@ footer {
     align-items: center;
     padding: 100px 0px 100px 0px;
     background-color: #f7f9fa;
+    gap: 15px;
 }
 
 .call-to-action-buttons button{
@@ -68,7 +69,7 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 
@@ -77,6 +78,11 @@ footer {
     padding: 20px;
     border: 1px solid #9196a1;
 }
+
+.coleccion-destacada :hover{
+    cursor: pointer;
+}
+
 
 .destacados{
     display: flex;
@@ -96,7 +102,7 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .hecho-destacado{
@@ -150,4 +156,8 @@ footer {
 
 .pm-img{
     background-color: #babdc4;
+}
+
+.card{
+    width: 18rem;
 }
