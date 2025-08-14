@@ -1,36 +1,35 @@
 <!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Registro</title>
+    <title>Login</title>
     <link rel="stylesheet" href="login.css">
 
 </head>
+
 <body>
 
     <div class="form-container">
         <div class="logo-placeholder">🌍</div>
-        <h2>Welcome </h2>
-        <p class="subtitle">Registrate para obtener tu cuenta en MetaMapa</p>
+        <h2>Bienvenido/a </h2>
 
         <form>
             <div class="form-group">
-                <label for="nombre">Nombre <span style="color:red">*</span></label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-
-                <label for="email">Email</label>
+                <label for="email">Usuario</label>
                 <input type="email" id="email" placeholder="hola@ejemplo.com" required>
-
                 <label for="contraseña">Contraseña</label>
                 <input type="contraseña" id="contraseña" placeholder="••••••••" required>
-                </div>
+                <a href="#">Olvidaste tu contraseña?</a>
+            </div>
 
-                <button type="submit" class="btn-submit">Registrarse</button>
+            <button type="submit" class="btn-submit">Iniciar Sesión</button>
 
-        <p class="cambiar-text">
-            ¿Ya tenes una cuenta? <a href="#" id="cambiar-para-registrarse">Inicia sesión</a>
-        </p>
-    </form>
+            <p class="cambiar-text">
+                ¿No tenés una cuenta? <a href="#" id="cambiar-para-registrarse">Registrate</a>
+            </p>
+        </form>
     </div>
 
 </body>
+
 </html>
