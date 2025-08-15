@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exploradorColecciones.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">🌍 MetaMapa</div>
+                <nav>
+                    <ul>
+                        <li><a href="../landing/landing.html">Inicio</a></li>
+                        <li><a href="#">Colecciones</a></li>
+                        <li><a href="../hechosYColecciones/formularioHecho.html">Contribuir</a></li>
+                        <li><a href="../authentication/login.html">Iniciar Sesión</a></li>
+                    </ul>
+                </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Explorador de Colecciones</h1>
+                <p class="page-description">
+                    Navega por las diferentes colecciones de hechos disponibles en esta instancia de MetaMapa. 
+                    Cada colección contiene información organizada temáticamente y geográficamente.
+                </p>
+            </div>
+
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <h3 class="collection-title">Desapariciones vinculadas a crímenes de odio</h3>
+                    <p class="collection-description">
+                        Registro de casos de desapariciones forzadas relacionadas con crímenes de odio en Argentina. 
+                        Incluye información sobre víctimas, fechas y ubicaciones de los últimos reportes.
+                    </p>
+                    <div class="collection-meta">
+                        <span>1,247 hechos</span>
+                        <span>Última actualización: hace 2 horas</span>
+                    </div>
+                    <div class="collection-actions">
+                        <a href="/colecciones/desapariciones-odio/hechos" class="btn btn-primary">Ver Hechos</a>
+                        <a href="/colecciones/desapariciones-odio/mapa" class="btn btn-secondary">Ver en Mapa</a>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <h3 class="collection-title">Incendios forestales en Argentina 2025</h3>
+                    <p class="collection-description">
+                        Monitoreo de incendios forestales ocurridos durante el año 2025 en territorio argentino. 
+                        Datos actualizados desde múltiples fuentes oficiales y reportes ciudadanos.
+                    </p>
+                    <div class="collection-meta">
+                        <span>892 hechos</span>
+                        <span>Última actualización: hace 30 minutos</span>
+                    </div>
+                    <div class="collection-actions">
+                        <a href="./exploradorHechos.html" class="btn btn-primary">Ver Hechos</a>
+                        <a href="/colecciones/incendios-forestales-2025/mapa" class="btn btn-secondary">Ver en Mapa</a>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <h3 class="collection-title">Víctimas de muertes viales en Argentina</h3>
+                    <p class="collection-description">
+                        Base de datos de accidentes de tránsito fatales en rutas y calles de Argentina. 
+                        Información recopilada para análisis de seguridad vial y prevención.
+                    </p>
+                    <div class="collection-meta">
+                        <span>3,456 hechos</span>
+                        <span>Última actualización: hace 1 día</span>
+                    </div>
+                    <div class="collection-actions">
+                        <a href="/colecciones/muertes-viales-argentina/hechos" class="btn btn-primary">Ver Hechos</a>
+                        <a href="/colecciones/muertes-viales-argentina/mapa" class="btn btn-secondary">Ver en Mapa</a>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <h3 class="collection-title">Desastres Naturales</h3>
+                    <p class="collection-description">
+                        Registro histórico de eventos climáticos extremos, terremotos, inundaciones y otros 
+                        desastres naturales que han afectado la región.
+                    </p>
+                    <div class="collection-meta">
+                        <span>678 hechos</span>
+                        <span>Última actualización: hace 3 horas</span>
+                    </div>
+                    <div class="collection-actions">
+                        <a href="/colecciones/desastres-naturales/hechos" class="btn btn-primary">Ver Hechos</a>
+                        <a href="/colecciones/desastres-naturales/mapa" class="btn btn-secondary">Ver en Mapa</a>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <h3 class="collection-title">Personas asesinadas por el estado</h3>
+                    <p class="collection-description">
+                        Documentación de casos de violencia institucional y abusos por parte de fuerzas 
+                        de seguridad en Argentina.
+                    </p>
+                    <div class="collection-meta">
+                        <span>234 hechos</span>
+                        <span>Última actualización: hace 5 horas</span>
+                    </div>
+                    <div class="collection-actions">
+                        <a href="/colecciones/violencia-institucional/hechos" class="btn btn-primary">Ver Hechos</a>
+                        <a href="/colecciones/violencia-institucional/mapa" class="btn btn-secondary">Ver en Mapa</a>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <h3 class="collection-title">Incendios forestales en España</h3>
+                    <p class="collection-description">
+                        Datos sobre incendios forestales en territorio español, integrados desde fuentes 
+                        oficiales europeas para análisis comparativo regional.
+                    </p>
+                    <div class="collection-meta">
+                        <span>445 hechos</span>
+                        <span>Última actualización: hace 2 días</span>
+                    </div>
+                    <div class="collection-actions">
+                        <a href="/colecciones/incendios-espana/hechos" class="btn btn-primary">Ver Hechos</a>
+                        <a href="/colecciones/incendios-espana/mapa" class="btn btn-secondary">Ver en Mapa</a>
+                    </div>
+                </div>
+            </div>
+            <div class="empty-state" style="display: none;">
+                <h3>No hay colecciones disponibles</h3>
+                <p>Aún no se han creado colecciones en esta instancia de MetaMapa.</p>
+                <a href="/admin/colecciones/nueva" class="btn btn-primary">Crear Primera Colección</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 MetaMapa - <a href="#"> Información legal & Privacidad</a></p>
+    </footer>
+</body>
+</html>
