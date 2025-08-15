@@ -5,74 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Hecho</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="formularioHecho.css">
 </head>
 
 <body>
-    <div class="container py-5">
-        <form class="p-5 border rounded-3">
-            <h4>Subir hecho</h4>
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <label for="titulo" class="form-label">Título</label>
-                    <input id="titulo" type="text" class="form-control" placeholder="Título del hecho">
-                </div>
+    <form action="" class="formulario-hecho">
+        <h4>Reportar hecho</h4>
+        <div class="row-imputs">
+            <div class="col">
+                <label for="titulo">Título <span style="color:red">*</span></label>
+                <input type="text" id="titulo" placeholder="Título" required>
+            </div>
+            <div class="col">
+                <label for="categoria">Categoría <span style="color:red">*</span></label>
+                <select name="" id="" required>
+                    <option selected>Seleccione una categoría</option>
+                    <option>...</option>
+                </select>
+            </div>
 
-                <div class="col-md-6">
-                    <label for="state" class="form-label">Categoría</label>
-                    <select id="state" class="form-select">
-                        <option selected>Seleccione...</option>
-                        <option>...</option>
-                    </select>
-                </div>
+        </div>
+        <label for="descripcion">Descripción <span style="color:red">*</span></label>
+        <input type="textarea" placeholder="Descripción" required>
+        <div class="row-imputs">
+            <div class="col">
+                <label for="fecha">Fecha del acontecimiento <span style="color:red">*</span></label>
+                <input type="date" id="fecha" placeholder="Fecha" required>
+            </div>
+            <div class="col">
+                <label for="hora">Hora del acontecimiento <span style="color:red">*</span></label>
+                <input type="time" id="hora" placeholder="Título" required>
+            </div>
+        </div>
+        <div class="row-imputs">
+            <div class="col">
+                <label for="direccion">Calle <span style="color:red">*</span></label>
+                <input type="text" placeholder="Calle" required>
+            </div>
+            <div class="col">
+                <label for="direccion">Altura <span style="color:red">*</span></label>
+                <input type="number" placeholder="Calle" required>
+            </div>
 
-                <div class="col-12">
-                    <label for="descripcion" class="form-label">Descripción del hecho</label>
-                    <textarea class="form-control" placeholder="Descripción" id="floatingTextarea2"
-                        style="height: 100px"></textarea>
-
-                </div>
-                <div class="col-6">
-                    <label for="date" class="form-label">Fecha del acontecimiento</label>
-                    <input type="date" id="date" class="form-control">
-                </div>
-                <div class="col-6">
-                    <label for="time" class="form-label">Hora del acontecimiento</label>
-                    <input type="time" id="time" class="form-control">
-                </div>
-                <div class="col-12">
-                    <label for="address" class="form-label">Dirección</label>
-                    <input id="address" class="form-control" placeholder="Direccion">
-                </div>
-
-                <div class="col-md-6 col-lg-5">
-                    <label for="city" class="form-label">Ciudad</label>
-                    <input id="city" class="form-control">
-                </div>
-
-                <div class="col-md-4 col-lg-4">
-                    <label for="state" class="form-label">Localidad</label>
-                    <select id="state" class="form-select">
-                        <option selected>Seleccione...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-
-                <div class="col-md-2 col-lg-3">
-                    <label for="altura" class="form-label">Altura</label>
-                    <input type="number" id="altura" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="formFileMultiple" class="form-label">Contenido multimedia</label>
-                    <input class="form-control" type="file" id="formFileMultiple" multiple>
-                </div>
+        </div>
+        <div class="row-imputs">
+            <div class="col">
+                <label for="direccion">Ciudad <span style="color:red">*</span></label>
+                <input type="text" placeholder="Ciudad" required>
+            </div>
+            <div class="col">
+                <label for="direccion">Localidad <span style="color:red">*</span></label>
+                <select name="" id="" required>
+                    <option selected>Seleccione una localidad</option>
+                    <option>...</option>
+                </select>
+            </div>
 
 
-                <div class="col-12">
-                    <button class="btn btn-primary">Subir hecho</button>
+        </div>
+            <div class="col">
+                <label for="multimedia">Contenido multimedia</label>
+                <div class="file-input-wrapper">
+                    <input type="file" id="multimedia" class="file-input" accept="image/*,video/*">
+                    <div class="file-input-display">
+                        <div>
+                            <div>Haz clic para subir archivos o arrastra y suelta</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </form>
+
+        <button class="btn-submit" type="submit">Subir hecho</button>
+    </form>
 </body>
 
 </html>
