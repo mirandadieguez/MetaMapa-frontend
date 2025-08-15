@@ -15,16 +15,23 @@
 <body>
     <header class="main-header">
         <div class="logo">🌍 MetaMapa</div>
-
+                <nav>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Colecciones</a></li>
+                        <li><a href="#">Contribuir</a></li>
+                        <li><a href="../authentication/login.html">Iniciar Sesión</a></li>
+                    </ul>
+                </nav>
     </header>
     <div class="landing-banner">
         <h1 class="landing-title">Unlock the Power of <br> Geographic Data</h1>
         <h5 class="landing-subtitle">MetaMapa empowers you to organize, analyze, and visualize <br> geospatial
             information like never before.</h5>
         <div class="call-to-action-buttons">
-            <button class="btn-login">Iniciar Sesión</button>
-            <button class="btn-signup">Registrarse</button>
-            <a href="#" class="btn-explorar">Explorar Colecciones</a>
+            <button class="btn-login" onclick="location.href='../authentication/login.html'">Iniciar Sesión</button>
+            <button class="btn-signup" onclick="location.href='../authentication/signup.html'">Registrarse</button>
+            <a href="../hechosYColecciones/exploradorColecciones.html" class="btn-explorar">Explorar Colecciones</a>
         </div>
     </div>
     <section id="propositos-objetivos" aria-labelledby="pm-title" class="pm-section">
