@@ -169,10 +169,12 @@ footer {
   .pm-divider::before { display:none; }
 }
 
-.pm-img{
-    background-color: #babdc4;
+.pm-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;  
+  display: block;    
 }
-
 .card{
     width: 18rem;
 }
