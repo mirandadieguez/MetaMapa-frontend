@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="detalleHecho.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">🌍 MetaMapa</div>
+        <nav>
+            <ul>
+                <li><a href="../landing/landing.html">Inicio</a></li>
+                <li><a href="./exploradorColecciones.html">Colecciones</a></li>
+                <li><a href="./formularioHecho.html">Contribuir</a></li>
+                <li><a href="../authentication/login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="../landing/landing.html">Inicio</a> ›
+                <a href="./exploradorColecciones.html">Colecciones</a> ›
+                <a href="./detalleColeccion.html">Incendios forestales en Argentina 2025</a> ›
+                Detalle del hecho
+            </div>
+
+            <!-- Fact Container -->
+            <div class="fact-container">
+                <!-- Main Content -->
+                <div class="fact-main">
+                    <!-- Fact Header -->
+                    <div class="fact-header">
+                        <h1 class="fact-title">Incendio forestal activo en Parque Nacional Los Glaciares</h1>
+                        <div class="fact-category">Incendio forestal</div>
+                        <div class="fact-status">
+                            <div class="consensus-indicator">
+                                <div class="consensus-dot consensus-verified"></div>
+                                <span><strong>Estado:</strong> Verificado por consenso</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fact Content -->
+                    <div class="fact-content">
+                        <!-- Description -->
+                        <section>
+                            <h3 style="margin-bottom: 1rem; color: #2c3e50;">Descripción</h3>
+                            <p class="fact-description">
+                                Incendio de gran magnitud detectado en el sector norte del Parque Nacional Los
+                                Glaciares.
+                                Las llamas han consumido aproximadamente 1,200 hectáreas de bosque nativo de lenga y
+                                ñire.
+                                Equipos especializados de bomberos forestales trabajan en la zona desde las primeras
+                                horas
+                                de la madrugada del 12 de agosto, utilizando tanto medios terrestres como aéreos para
+                                combatir el fuego.
+                            </p>
+                            <p class="fact-description" style="margin-top: 1rem;">
+                                Las condiciones meteorológicas adversas, con vientos de hasta 35 km/h y baja humedad
+                                relativa del 20%, han dificultado las tareas de extinción. Se ha establecido un
+                                perímetro
+                                de seguridad de 5 kilómetros y se han evacuado preventivamente las estancias cercanas.
+                                No se reportan víctimas hasta el momento.
+                            </p>
+                        </section>
+
+                        <!-- Multimedia Section -->
+                        <section class="multimedia-section">
+                            <h3 class="multimedia-title">Contenido Multimedia</h3>
+                            <div class="multimedia-grid">
+                                <div class="multimedia-item">
+                                    <div class="multimedia-placeholder">📷</div>
+                                </div>
+                                <div class="multimedia-item">
+                                    <div class="multimedia-placeholder">🎥</div>
+                                </div>
+                                <div class="multimedia-item">
+                                    <div class="multimedia-placeholder">📊</div>
+                                </div>
+                            </div>
+                        </section>
+                            <button class="btn btn-danger" onclick="location.href='./solicitudEliminacion.html'">Solicitar Eliminación</button>
+                
+                    </div>
+
+
+                </div>
+
+                <!-- Sidebar -->
+                <div class="fact-sidebar">
+                    <!-- Basic Information -->
+                    <div class="info-card">
+                        <h3>Información Básica</h3>
+                        <table class="metadata-table">
+                            <tr>
+                                <td>Fecha del acontecimiento:</td>
+                                <td><strong>12 de agosto, 2025</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Hora del acontecimiento:</td>
+                                <td><strong>03:45 hs</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Fecha de reporte:</td>
+                                <td><strong>13 de agosto, 2025</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Estado:</td>
+                                <td><strong>Activo</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Location Information -->
+                    <div class="info-card">
+                        <h3>Ubicación</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Provincia</span>
+                                <span class="info-value">Santa Cruz</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Localidad</span>
+                                <span class="info-value">El Calafate</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Área específica</span>
+                                <span class="info-value">Parque Nacional Los Glaciares - Sector Norte</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Coordenadas</span>
+                                <span class="info-value">-50.2938, -73.0138</span>
+                            </div>
+                        </div>
+
+                        <div class="location-map">
+                            <div>
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🗺️</div>
+                                <p>Mapa interactivo<br>de la ubicación</p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary">Ver en Mapa Completo</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Back Navigation -->
+            <div style="text-align: center;">
+                <a href="./detalleColeccion.html" class="btn btn-secondary">← Volver a la Colección</a>
+                <a href="./exploradorColecciones.html" class="btn btn-secondary">Ver Todas las Colecciones</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 MetaMapa - <a href="#"> Información legal & Privacidad</a></p>
+    </footer>
+
+</body>
+
+</html>
