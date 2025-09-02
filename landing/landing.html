@@ -26,8 +26,8 @@
     </header>
     <div class="landing-banner">
         <h1 class="landing-title">Unlock the Power of <br> Geographic Data</h1>
-        <h5 class="landing-subtitle">MetaMapa empowers you to organize, analyze, and visualize <br> geospatial
-            information like never before.</h5>
+        <h5 class="landing-subtitle">MetaMapa le permite organizar, analizar y visualizar <br>
+            información geoespacial como nunca antes.</h5>
         <div class="call-to-action-buttons">
             <button class="btn-login" onclick="location.href='../authentication/login.html'">Iniciar Sesión</button>
             <button class="btn-signup" onclick="location.href='../authentication/signup.html'">Registrarse</button>
@@ -114,47 +114,58 @@
             </div>
         </div>
     </section>
+
     <div class="destacados">
         <h2>Colecciones Destacadas</h2>
         <div class="colecciones-destacadas">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <h5 class="card-title">Incendios forestales en Argentina 2025</h5>
+                    <p class="card-text">Monitoreo de incendios forestales ocurridos durante el año 2025 en territorio argentino.</p>
+                    <div class="collection-meta">
+                        <span>892 hechos</span>
+                        <span>Última actualización: hace 30 minutos</span>
+                    </div>
+                    <a href="../hechosYColecciones/detalleColeccion.html" class="btn btn-primary">Ver Hechos</a>
+                    <a href="/colecciones/incendios-forestales-2025/mapa" class="btn btn-secondary">Ver en Mapa</a>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <h5 class="card-title">Desapariciones vinculadas a crímenes de odio</h5>
+                    <p class="card-text">Registro de casos de desapariciones forzadas relacionadas con crímenes de odio en Argentina.</p>
+                    <div class="collection-meta">
+                        <span>1,247 hechos</span>
+                        <span>Última actualización: hace 2 horas</span>
+                    </div>
+                    <a href="/colecciones/desapariciones-odio/hechos" class="btn btn-primary">Ver Hechos</a>
+                    <a href="/colecciones/desapariciones-odio/mapa" class="btn btn-secondary">Ver en Mapa</a>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <h5 class="card-title">Víctimas de muertes viales en Argentina</h5>
+                    <p class="card-text">Base de datos de accidentes de tránsito fatales en rutas y calles de Argentina.
+                        Información recopilada para análisis de seguridad vial y prevención.</p>
+                    <div class="collection-meta">
+                        <span>3,456 hechos</span>
+                        <span>Última actualización: hace 1 día</span>
+                    </div>
+                    <a href="/colecciones/muertes-viales-argentina/hechos" class="btn btn-primary">Ver Hechos</a>
+                    <a href="/colecciones/muertes-viales-argentina/mapa" class="btn btn-secondary">Ver en Mapa</a>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <h5 class="card-title">Desastres Naturales</h5>
+                    <p class="card-text">Registro histórico de eventos climáticos extremos, terremotos, inundaciones y otros
+                        desastres naturales que han afectado la región.</p>
+                    <div class="collection-meta">
+                        <span>678 hechos</span>
+                        <span>Última actualización: hace 3 horas</span>
+                    </div>
+                    <a href="/colecciones/desastres-naturales/hechos" class="btn btn-primary">Ver Hechos</a>
+                    <a href="/colecciones/desastres-naturales/mapa" class="btn btn-secondary">Ver en Mapa</a>
                 </div>
             </div>
 
@@ -162,49 +173,183 @@
 
         <h2>Hechos Destacados</h2>
         <div class="hechos-destacados">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to show that equal height
-                        action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <!-- Hecho 1: Incendio forestal -->
+            <div class="hecho-destacado">
+                <div class="hecho-header">
+                    <h3 class="hecho-title">Incendio forestal activo en Parque Nacional Los Glaciares</h3>
+                    <div class="hecho-category category-incendio">Incendio forestal</div>
+                    <div class="hecho-status">
+                        <div class="consensus-indicator">
+                            <div class="consensus-dot consensus-verified"></div>
+                            <span>Verificado por consenso</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hecho-content">
+                    <p class="hecho-description">
+                        Incendio de gran magnitud detectado en el sector norte del Parque Nacional Los Glaciares.
+                        Las llamas han consumido aproximadamente 1,200 hectáreas de bosque nativo de lenga y ñire.
+                        Equipos especializados trabajan en la extinción desde las primeras horas.
+                    </p>
+                    <div class="hecho-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Fecha</span>
+                            <span class="meta-value">12 ago, 2025</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Ubicación</span>
+                            <span class="meta-value">Santa Cruz</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Estado</span>
+                            <span class="meta-value">Activo</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Actualizado</span>
+                            <span class="meta-value">hace 3 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hecho-footer">
+                    <a href="../hechosYColecciones/detalleHecho.html" class="btn-hecho btn-hecho-primary">Ver Detalle</a>
+                    <a href="#" class="btn-hecho btn-hecho-secondary">Ver en Mapa</a>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to show that equal height
-                        action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+            <!-- Hecho 2: Accidente vial -->
+            <div class="hecho-destacado">
+                <div class="hecho-header">
+                    <h3 class="hecho-title">Accidente múltiple en Ruta Nacional 9</h3>
+                    <div class="hecho-category category-accidente">Accidente vial</div>
+                    <div class="hecho-status">
+                        <div class="consensus-indicator">
+                            <div class="consensus-dot consensus-verified"></div>
+                            <span>Verificado por consenso</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hecho-content">
+                    <p class="hecho-description">
+                        Colisión múltiple involucrando 4 vehículos en el km 847 de la Ruta Nacional 9, a la altura
+                        de Rosario. Las condiciones de visibilidad reducida por niebla contribuyeron al siniestro.
+                        Se reportan 2 víctimas fatales y 6 heridos.
+                    </p>
+                    <div class="hecho-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Fecha</span>
+                            <span class="meta-value">15 ago, 2025</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Ubicación</span>
+                            <span class="meta-value">Santa Fe</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Estado</span>
+                            <span class="meta-value">Finalizado</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Actualizado</span>
+                            <span class="meta-value">hace 1 hora</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hecho-footer">
+                    <a href="#" class="btn-hecho btn-hecho-primary">Ver Detalle</a>
+                    <a href="#" class="btn-hecho btn-hecho-secondary">Ver en Mapa</a>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to show that equal height
-                        action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+            <!-- Hecho 3: Desaparición -->
+            <div class="hecho-destacado">
+                <div class="hecho-header">
+                    <h3 class="hecho-title">Derrame químico en fábrica industrial de Córdoba</h3>
+                    <div class="hecho-category category-desaparicion">Accidente ambiental</div>
+                    <div class="hecho-status">
+                        <div class="consensus-indicator">
+                            <div class="consensus-dot consensus-unverified"></div>
+                            <span>En proceso de verificación</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hecho-content">
+                    <p class="hecho-description">
+                        Reporte de un derrame de sustancias químicas en una planta industrial ubicada en las afueras de Córdoba.
+                        Vecinos informaron fuertes olores y presencia de humo. Autoridades ambientales y de emergencias trabajan
+                        en la zona para contener la situación y evaluar riesgos a la salud pública.
+                    </p>
+                    <div class="hecho-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Fecha</span>
+                            <span class="meta-value">10 ago, 2025</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Ubicación</span>
+                            <span class="meta-value">Córdoba</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Estado</span>
+                            <span class="meta-value">Activo</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Actualizado</span>
+                            <span class="meta-value">hace 2 horas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hecho-footer">
+                    <a href="#" class="btn-hecho btn-hecho-primary">Ver Detalle</a>
+                    <a href="#" class="btn-hecho btn-hecho-secondary">Ver en Mapa</a>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to show that equal height
-                        action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+            <!-- Hecho 4: Desastre natural -->
+            <div class="hecho-destacado">
+                <div class="hecho-header">
+                    <h3 class="hecho-title">Inundaciones severas en La Plata por lluvias torrenciales</h3>
+                    <div class="hecho-category category-desastre">Desastre natural</div>
+                    <div class="hecho-status">
+                        <div class="consensus-indicator">
+                            <div class="consensus-dot consensus-pending"></div>
+                            <span>Requiere más fuentes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hecho-content">
+                    <p class="hecho-description">
+                        Precipitaciones extraordinarias de 180mm en 6 horas causaron inundaciones en varios barrios
+                        de La Plata. Miles de familias evacuadas, calles anegadas y cortes de servicios básicos.
+                        Defensa Civil trabaja en la asistencia a damnificados.
+                    </p>
+                    <div class="hecho-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Fecha</span>
+                            <span class="meta-value">14 ago, 2025</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Ubicación</span>
+                            <span class="meta-value">Buenos Aires</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Estado</span>
+                            <span class="meta-value">En desarrollo</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Actualizado</span>
+                            <span class="meta-value">hace 45 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hecho-footer">
+                    <a href="#" class="btn-hecho btn-hecho-primary">Ver Detalle</a>
+                    <a href="#" class="btn-hecho btn-hecho-secondary">Ver en Mapa</a>
                 </div>
             </div>
         </div>
 
     </div>
 
-    </div>
     <footer>
-        <p>© 2025 MetaMapa - <a href="#"> Información legal & Privacidad</a></p>
+        <p>© 2025 MetaMapa - <a href="privacidad.html"> Información Legal & Privacidad</a></p>
     </footer>
 </body>
 
