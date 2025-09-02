@@ -85,7 +85,7 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 20px;
 }
 
@@ -118,6 +118,7 @@ footer {
     margin-top: 0px;
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .hechos-destacados{
