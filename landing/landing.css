@@ -347,6 +347,12 @@ footer {
     width: 18rem;
 }
 
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 @media (max-width: 768px) {
     .hechos-destacados {
         grid-template-columns: 1fr;

@@ -1,82 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="gestorSolicitudes.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-p8f1X+zvN0..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
+
 <body>
-<header class="main-header">
-  <div class="logo">🌍 MetaMapa</div>
-  <div class="header-admin-info">
-    <div class="header-actions">
-      <button class="btn-notification">
-        <i class="fas fa-bell"></i>
-        <span class="notification-count">3</span>
-      </button>
-      <div class="user-menu">
-        <i class="fas fa-user-circle"></i>
-        <span>Administrador</span>
-      </div>
-    </div>
-  </div>
-</header>
+    <header class="main-header">
+        <div class="logo">🌍 MetaMapa</div>
+        <div class="header-admin-info">
+            <div class="header-actions">
+                <button class="btn-notification">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                <div class="user-menu">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Administrador</span>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <div class="container">
         <!-- Sidebar -->
-  <aside class="admin-sidebar">
-    <nav class="sidebar-nav">
-      <ul>
-        <li class="nav-item">
-          <a href="#dashboard" class="nav-link">
-            <i class="fas fa-tachometer-alt"></i>
-            <span>Panel Principal</span>
-          </a>
-        </li>
-        <li class="nav-item">
-        </li>
-        <li class="nav-item">
-          <a href="#sources" class="nav-link">
-            <i class="fas fa-database"></i>
-            <span>Fuentes</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#consensus" class="nav-link">
-            <i class="fas fa-balance-scale"></i>
-            <span>Consenso</span>
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a href="#deletion-requests" class="nav-link">
-            <i class="fas fa-trash-alt"></i>
-            <span>Solicitudes de Eliminación</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </aside>
+        <aside class="admin-sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item">
+                        <a href="#dashboard" class="nav-link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Panel Principal</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sources" class="nav-link">
+                            <i class="fas fa-database"></i>
+                            <span>Fuentes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#consensus" class="nav-link">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>Consenso</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#deletion-requests" class="nav-link">
+                            <i class="fas fa-trash-alt"></i>
+                            <span>Solicitudes de Eliminación</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
         <!-- Main Content -->
         <div class="main-content">
             <div class="page-header">
                 <div>
                     <h1 class="page-title">Solicitudes de Eliminación de Hechos</h1>
-                    <p class="page-subtitle">Gestiona las solicitudes de eliminación de hechos enviadas por los usuarios</p>
+                    <p class="page-subtitle">Gestiona las solicitudes de eliminación de hechos enviadas por los usuarios
+                    </p>
                 </div>
                 <div class="header-actions update-button">
                     <button class="btn btn-outline" onclick="refreshRequests()">
-                                      <i class="fas fa-sync-alt"></i> Actualizar
+                        <i class="fas fa-sync-alt"></i> Actualizar
                     </button>
-            <a href="crearColeccion.html" class="btn-add-new">
-              <i class="fas fa-plus"></i>
-              Revisar todas las solicitudes
-            </a>
+                    <a href="crearColeccion.html" class="btn-add-new">
+                        <i class="fas fa-plus"></i>
+                        Revisar todas las solicitudes
+                    </a>
                 </div>
             </div>
 
@@ -104,7 +107,8 @@
                     </div>
                     <div class="filter-group">
                         <label class="filter-label">Buscar por ID</label>
-                        <input type="text" class="filter-input" placeholder="ID de Solicitud" id="idFilter" onkeyup="filterRequests()">
+                        <input type="text" class="filter-input" placeholder="ID de Solicitud" id="idFilter"
+                            onkeyup="filterRequests()">
                     </div>
                     <div class="filter-group">
                         <label class="filter-label">Rango de Fechas</label>
@@ -134,7 +138,8 @@
                             <td>2023-10-26</td>
                             <td>alice@example.com</td>
                             <td>
-                                <div style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                <div
+                                    style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                                     "El calentamiento global no es causado por humanos"
                                 </div>
                                 <small style="color: #6c757d;">ID: F1234</small>
@@ -142,17 +147,17 @@
                             <td>Información desactualizada</td>
                             <td><span class="status-badge status-pending">Pendiente</span></td>
                             <td>
-                              <div class="action-buttons">
-                                <button class="btn-action edit" title="Aprobar">
-                                  <i class="fa-solid fa-check"></i>
-                                </button>
-                                <button class="btn-action view" title="Ver">
-                                  <i class="fas fa-eye"></i>
-                                </button>
-                                <button class="btn-action delete" title="Rechazar">
-                                  <i class="fas fa-xmark"></i>
-                                </button>
-                              </div>
+                                <div class="action-buttons">
+                                    <button class="btn-action edit" title="Aprobar">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+                                    <button class="btn-action view" title="Ver">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="btn-action delete" title="Rechazar">
+                                        <i class="fas fa-xmark"></i>
+                                    </button>
+                                </div>
                             </td>
                         </tr>
                         <tr data-status="approved" data-user="bob@example.com" data-id="DR002">
@@ -160,7 +165,8 @@
                             <td>2023-10-25</td>
                             <td>bob@example.com</td>
                             <td>
-                                <div style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                <div
+                                    style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                                     "Las vacunas causan autism"
                                 </div>
                                 <small style="color: #6c757d;">ID: F5678</small>
@@ -168,17 +174,17 @@
                             <td>Desinformación médica</td>
                             <td><span class="status-badge status-approved">Aprobado</span></td>
                             <td>
-                              <div class="action-buttons">
-                                <button class="btn-action edit" title="Aprobar">
-                                  <i class="fas fa-check"></i>
-                                </button>
-                                <button class="btn-action view" title="Ver">
-                                  <i class="fas fa-eye"></i>
-                                </button>
-                                <button class="btn-action delete" title="Rechazar">
-                                  <i class="fas fa-xmark"></i>
-                                </button>
-                              </div>
+                                <div class="action-buttons">
+                                    <button class="btn-action edit" title="Aprobar">
+                                        <i class="fas fa-check"></i>
+                                    </button>
+                                    <button class="btn-action view" title="Ver">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="btn-action delete" title="Rechazar">
+                                        <i class="fas fa-xmark"></i>
+                                    </button>
+                                </div>
                             </td>
                         </tr>
                         <tr data-status="rejected" data-user="charlie@example.com" data-id="DR003">
@@ -186,7 +192,8 @@
                             <td>2023-10-24</td>
                             <td>charlie@example.com</td>
                             <td>
-                                <div style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                <div
+                                    style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                                     "París es la capital de Francia"
                                 </div>
                                 <small style="color: #6c757d;">ID: F9012</small>
@@ -194,17 +201,17 @@
                             <td>Solicitud sin fundamento</td>
                             <td><span class="status-badge status-rejected">Rechazado</span></td>
                             <td>
-                              <div class="action-buttons">
-                                <button class="btn-action edit" title="Aprobar">
-                                  <i class="fas fa-check"></i>
-                                </button>
-                                <button class="btn-action view" title="Ver">
-                                  <i class="fas fa-eye"></i>
-                                </button>
-                                <button class="btn-action delete" title="Rechazar">
-                                  <i class="fas fa-xmark"></i>
-                                </button>
-                              </div>
+                                <div class="action-buttons">
+                                    <button class="btn-action edit" title="Aprobar">
+                                        <i class="fas fa-check"></i>
+                                    </button>
+                                    <button class="btn-action view" title="Ver">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="btn-action delete" title="Rechazar">
+                                        <i class="fas fa-xmark"></i>
+                                    </button>
+                                </div>
                             </td>
                         </tr>
                         <tr data-status="pending" data-user="diana@example.com" data-id="DR004">
@@ -212,7 +219,8 @@
                             <td>2023-10-23</td>
                             <td>diana@example.com</td>
                             <td>
-                                <div style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                <div
+                                    style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                                     "El COVID-19 se originó en un laboratorio"
                                 </div>
                                 <small style="color: #6c757d;">ID: F3456</small>
@@ -220,17 +228,17 @@
                             <td>Teoría de conspiración</td>
                             <td><span class="status-badge status-pending">Pendiente</span></td>
                             <td>
-                              <div class="action-buttons">
-                                <button class="btn-action edit" title="Aprobar">
-                                  <i class="fas fa-check"></i>
-                                </button>
-                                <button class="btn-action view" title="Ver">
-                                  <i class="fas fa-eye"></i>
-                                </button>
-                                <button class="btn-action delete" title="Rechazar">
-                                  <i class="fas fa-xmark"></i>
-                                </button>
-                              </div>
+                                <div class="action-buttons">
+                                    <button class="btn-action edit" title="Aprobar">
+                                        <i class="fas fa-check"></i>
+                                    </button>
+                                    <button class="btn-action view" title="Ver">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="btn-action delete" title="Rechazar">
+                                        <i class="fas fa-xmark"></i>
+                                    </button>
+                                </div>
                             </td>
                         </tr>
                         <tr data-status="approved" data-user="eve@example.com" data-id="DR005">
@@ -238,7 +246,8 @@
                             <td>2023-10-22</td>
                             <td>eve@example.com</td>
                             <td>
-                                <div style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                <div
+                                    style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                                     "Los dinosaurios vivieron hace 6000 años"
                                 </div>
                                 <small style="color: #6c757d;">ID: F7890</small>
@@ -246,17 +255,17 @@
                             <td>Información científicamente incorrecta</td>
                             <td><span class="status-badge status-approved">Aprobado</span></td>
                             <td>
-                              <div class="action-buttons">
-                                <button class="btn-action edit" title="Aprobar">
-                                  <i class="fas fa-check"></i>
-                                </button>
-                                <button class="btn-action view" title="Ver">
-                                  <i class="fas fa-eye"></i>
-                                </button>
-                                <button class="btn-action delete" title="Rechazar">
-                                  <i class="fas fa-xmark"></i>
-                                </button>
-                              </div>
+                                <div class="action-buttons">
+                                    <button class="btn-action edit" title="Aprobar">
+                                        <i class="fas fa-check"></i>
+                                    </button>
+                                    <button class="btn-action view" title="Ver">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="btn-action delete" title="Rechazar">
+                                        <i class="fas fa-xmark"></i>
+                                    </button>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -277,4 +286,5 @@
         </div>
     </div>
 </body>
+
 </html>
