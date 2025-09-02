@@ -40,6 +40,9 @@ header .logo {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.update-button{
     margin: 20px;
 }
 
