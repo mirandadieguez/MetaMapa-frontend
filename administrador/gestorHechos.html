@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestor de solicitudes</title>
-    <link rel="stylesheet" href="gestorSolicitudes.css">
+    <title>Gestor de hechos</title>
+    <link rel="stylesheet" href="gestorHechos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-p8f1X+zvN0..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -54,14 +54,14 @@
                             <span>Consenso</span>
                         </a>
                     </li>
-                    <li class="nav-item active">
-                        <a href="#deletion-requests" class="nav-link">
+                    <li class="nav-item">
+                        <a href="#deletion-requests" class="nav-link" onclick="location.href = './gestorSolicitudes.html'">
                             <i class="fas fa-trash-alt"></i>
                             <span>Solicitudes de Eliminación</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#deletion-requests" class="nav-link" onclick="location.href='./gestorHechos.html'">
+                    <li class="nav-item active">
+                        <a href="#deletion-requests" class="nav-link">
                             <i class="fas fa-file"></i>
                             <span>Hechos</span>
                         </a>
@@ -74,8 +74,8 @@
         <div class="main-content">
             <div class="page-header">
                 <div>
-                    <h1 class="page-title">Solicitudes de Eliminación de Hechos</h1>
-                    <p class="page-subtitle">Gestiona las solicitudes de eliminación de hechos enviadas por los usuarios
+                    <h1 class="page-title">Hechos</h1>
+                    <p class="page-subtitle">Gestiona los hechos recibidos de las distintas fuentes
                     </p>
                 </div>
                 <div class="header-actions update-button">
@@ -100,13 +100,9 @@
                         </select>
                     </div>
                     <div class="filter-group">
-                        <label class="filter-label">Filtrar por Usuario</label>
-                        <select class="filter-select" id="userFilter" onchange="filterRequests()">
-                            <option value="">Seleccionar Usuario</option>
-                            <option value="alice@example.com">alice@example.com</option>
-                            <option value="bob@example.com">bob@example.com</option>
-                            <option value="charlie@example.com">charlie@example.com</option>
-                        </select>
+                        <label class="filter-label">Filtrar por Ubicación</label>
+                        <input type="text" class="filter-input" placeholder="Ubicación del hecho" id="idFilter"
+                            onkeyup="filterRequests()">
                     </div>
                     <div class="filter-group">
                         <label class="filter-label">Buscar por ID</label>
@@ -126,11 +122,10 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>ID Solicitud</th>
-                            <th>Fecha</th>
-                            <th>Usuario</th>
-                            <th>Hecho a Eliminar</th>
-                            <th>Razón</th>
+                            <th>ID Hecho</th>
+                            <th>Fecha del hecho</th>
+                            <th>Título</th>
+                            <th>Ubicación</th>
                             <th>Estado</th>
                             <th>Acciones</th>
                         </tr>
@@ -139,15 +134,8 @@
                         <tr data-status="pending" data-user="alice@example.com" data-id="DR001">
                             <td>DR001</td>
                             <td>2023-10-26</td>
-                            <td>alice@example.com</td>
-                            <td>
-                                <div
-                                    style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                    "El calentamiento global no es causado por humanos"
-                                </div>
-                                <small style="color: #6c757d;">ID: F1234</small>
-                            </td>
-                            <td>Información desactualizada</td>
+                            <td>Incendio forestal activo en Parque Nacional Los Glaciares</td>
+                            <td>Santa Cruz, Argentina</td>
                             <td><span class="status-badge status-pending">Pendiente</span></td>
                             <td>
                                 <div class="action-buttons">
@@ -166,15 +154,8 @@
                         <tr data-status="approved" data-user="bob@example.com" data-id="DR002">
                             <td>DR002</td>
                             <td>2023-10-25</td>
-                            <td>bob@example.com</td>
-                            <td>
-                                <div
-                                    style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                    "Las vacunas causan autism"
-                                </div>
-                                <small style="color: #6c757d;">ID: F5678</small>
-                            </td>
-                            <td>Desinformación médica</td>
+                            <td>Incendio controlado en zona rural de Mendoza</td>
+                            <td>Mendoza, Argentina</td>
                             <td><span class="status-badge status-approved">Aprobado</span></td>
                             <td>
                                 <div class="action-buttons">
@@ -193,15 +174,8 @@
                         <tr data-status="rejected" data-user="charlie@example.com" data-id="DR003">
                             <td>DR003</td>
                             <td>2023-10-24</td>
-                            <td>charlie@example.com</td>
-                            <td>
-                                <div
-                                    style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                    "París es la capital de Francia"
-                                </div>
-                                <small style="color: #6c757d;">ID: F9012</small>
-                            </td>
-                            <td>Solicitud sin fundamento</td>
+                            <td>Alerta por condiciones de riesgo extremo en Neuquén</td>
+                            <td>Neuquén, Argentina</td>
                             <td><span class="status-badge status-rejected">Rechazado</span></td>
                             <td>
                                 <div class="action-buttons">
@@ -220,15 +194,8 @@
                         <tr data-status="pending" data-user="diana@example.com" data-id="DR004">
                             <td>DR004</td>
                             <td>2023-10-23</td>
-                            <td>diana@example.com</td>
-                            <td>
-                                <div
-                                    style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                    "El COVID-19 se originó en un laboratorio"
-                                </div>
-                                <small style="color: #6c757d;">ID: F3456</small>
-                            </td>
-                            <td>Teoría de conspiración</td>
+                            <td>Foco de incendio detectado por satélite en Córdoba</td>
+                            <td>Córdoba, Argentina</td>
                             <td><span class="status-badge status-pending">Pendiente</span></td>
                             <td>
                                 <div class="action-buttons">
@@ -247,15 +214,8 @@
                         <tr data-status="approved" data-user="eve@example.com" data-id="DR005">
                             <td>DR005</td>
                             <td>2023-10-22</td>
-                            <td>eve@example.com</td>
-                            <td>
-                                <div
-                                    style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                    "Los dinosaurios vivieron hace 6000 años"
-                                </div>
-                                <small style="color: #6c757d;">ID: F7890</small>
-                            </td>
-                            <td>Información científicamente incorrecta</td>
+                            <td>Incendio en pastizales de Entre Ríos controlado</td>
+                            <td>Entre Ríos, Argentina </td>
                             <td><span class="status-badge status-approved">Aprobado</span></td>
                             <td>
                                 <div class="action-buttons">
@@ -274,7 +234,7 @@
                     </tbody>
                 </table>
                 <div class="table-footer">
-                    <div class="showing-text">Mostrando 5 de 12 solicitudes.</div>
+                    <div class="showing-text">Mostrando 5 de 12 hechos.</div>
                     <div class="pagination">
                         <button class="pagination-btn">«</button>
                         <button class="pagination-btn">‹</button>
