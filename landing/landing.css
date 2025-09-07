@@ -364,6 +364,12 @@ footer {
     }
 }
 
+.mapa-interactivo{
+    display: flex;
+    justify-content: center;
+    
+}
+
 /* HASTA ACA HICE
 
 .hechos-destacados{
