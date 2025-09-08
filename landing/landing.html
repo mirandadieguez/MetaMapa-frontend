@@ -1,14 +1,19 @@
 <!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <title> MetaMapa </title>
+
     <link rel="stylesheet" href="landing.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-p8f1X+zvN0... (omito el integrity opcional)..." crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 </head>
 
@@ -24,6 +29,7 @@
             </ul>
         </nav>
     </header>
+
     <div class="landing-banner">
         <h1 class="landing-title">Unlock the Power of <br> Geographic Data</h1>
         <h5 class="landing-subtitle">MetaMapa le permite organizar, analizar y visualizar <br>
@@ -34,10 +40,11 @@
             <a href="../hechosYColecciones/exploradorColecciones.html" class="btn-explorar">Explorar Colecciones</a>
         </div>
     </div>
+
     <section id="propositos-objetivos" aria-labelledby="pm-title" class="pm-section">
         <div class="pm-container">
             <div class="pm-left">
-                <h2 id="pm-title"><i class="fa-solid fa-location-pin pm-icon"></i>Nuestro Propósito</h2>
+                <h2 id="pm-title"><i class="fa-solid fa-location-pin pm-icon"></i> Nuestro Propósito</h2>
                 <p class="pm-purpose">
                     MetaMapa potencia la inteligencia colectiva para transformar aportes individuales en
                     información georreferenciada y multimedia fiable. Ordenamos, etiquetamos y situamos
@@ -45,17 +52,14 @@
                     prevención, visibilización e intervención en problemáticas reales.
                 </p>
                 <div class="pm-img">
-                    <img src="../img/mapa.jpg" alt="">
+                    <img src="../img/mapa.jpg" alt="imagen mapa">
                 </div>
-
-
             </div>
 
             <div class="pm-divider" aria-hidden="true"></div>
 
             <div class="pm-right" role="list" aria-label="Objetivos principales">
-
-                <h2 class="pm-right-title"><i class="fa-solid fa-bullseye pm-icon"></i>Nuestros Objetivos</h2>
+                <h2 class="pm-right-title"><i class="fa-solid fa-bullseye pm-icon"></i> Nuestros Objetivos</h2>
 
                 <article class="pm-item" role="listitem">
                     <div class="pm-icon" aria-hidden="true">
@@ -114,11 +118,16 @@
             </div>
         </div>
     </section>
-    <div class="mapa-interactivo">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d62465.020434511345!2d-58.42345189929945!3d-34.631632838549784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1757287498711!5m2!1ses!2sar" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!-- === MAPA INTERACTIVO (reemplaza el iframe por este div) === -->
+    <div class="mapa-interactivo container">
+        <div id="map"></div>
     </div>
-    <div class="destacados">
+
+    <div class="destacados container">
         <h2>Destacados</h2>
+
+        <!-- TARJETAS DE COLECCIONES -->
         <div class="colecciones-destacadas">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
@@ -126,69 +135,67 @@
                     <p class="card-text">Monitoreo de incendios forestales ocurridos durante el año 2025 en territorio
                         argentino.</p>
                     <div class="collection-meta">
-                        <span>892 hechos</span>
-                        <span>Última actualización: hace 30 minutos</span>
+                        <span>892 hechos</span><br/>
+                        <small>Última actualización: hace 30 minutos</small>
                     </div>
-                    <div>
-                    <a href="../hechosYColecciones/detalleColeccion.html" class="btn btn-primary">Ver Hechos</a>
-                    <a href="/colecciones/incendios-forestales-2025/mapa" class="btn btn-secondary">Ver en Mapa</a>
+                    <div style="margin-top:8px;">
+                        <a href="../hechosYColecciones/detalleColeccion.html" class="btn btn-primary">Ver Hechos</a>
+                        <a href="/colecciones/incendios-forestales-2025/mapa" class="btn btn-secondary">Ver en Mapa</a>
                     </div>
-
                 </div>
             </div>
+
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Desapariciones vinculadas a crímenes de odio</h5>
                     <p class="card-text">Registro de casos de desapariciones forzadas relacionadas con crímenes de odio
                         en Argentina.</p>
                     <div class="collection-meta">
-                        <span>1,247 hechos</span>
-                        <span>Última actualización: hace 2 horas</span>
+                        <span>1,247 hechos</span><br/>
+                        <small>Última actualización: hace 2 horas</small>
                     </div>
-                    <div>
-                    <a href="/colecciones/desapariciones-odio/hechos" class="btn btn-primary">Ver Hechos</a>
-                    <a href="/colecciones/desapariciones-odio/mapa" class="btn btn-secondary">Ver en Mapa</a>
+                    <div style="margin-top:8px;">
+                        <a href="/colecciones/desapariciones-odio/hechos" class="btn btn-primary">Ver Hechos</a>
+                        <a href="/colecciones/desapariciones-odio/mapa" class="btn btn-secondary">Ver en Mapa</a>
                     </div>
-
                 </div>
             </div>
+
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Víctimas de muertes viales en Argentina</h5>
                     <p class="card-text">Base de datos de accidentes de tránsito fatales en rutas y calles de Argentina.
                         Información recopilada para análisis de seguridad vial y prevención.</p>
                     <div class="collection-meta">
-                        <span>3,456 hechos</span>
-                        <span>Última actualización: hace 1 día</span>
+                        <span>3,456 hechos</span><br/>
+                        <small>Última actualización: hace 1 día</small>
                     </div>
-                    <div>
-                    <a href="/colecciones/muertes-viales-argentina/hechos" class="btn btn-primary">Ver Hechos</a>
-                    <a href="/colecciones/muertes-viales-argentina/mapa" class="btn btn-secondary">Ver en Mapa</a>
+                    <div style="margin-top:8px;">
+                        <a href="/colecciones/muertes-viales-argentina/hechos" class="btn btn-primary">Ver Hechos</a>
+                        <a href="/colecciones/muertes-viales-argentina/mapa" class="btn btn-secondary">Ver en Mapa</a>
                     </div>
-
                 </div>
             </div>
+
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Desastres Naturales</h5>
                     <p class="card-text">Registro histórico de eventos climáticos extremos, terremotos, inundaciones y
-                        otros
-                        desastres naturales que han afectado la región.</p>
+                        otros desastres naturales que han afectado la región.</p>
                     <div class="collection-meta">
-                        <span>678 hechos</span>
-                        <span>Última actualización: hace 3 horas</span>
+                        <span>678 hechos</span><br/>
+                        <small>Última actualización: hace 3 horas</small>
                     </div>
-                    <div>
-                    <a href="/colecciones/desastres-naturales/hechos" class="btn btn-primary">Ver Hechos</a>
-                    <a href="/colecciones/desastres-naturales/mapa" class="btn btn-secondary">Ver en Mapa</a>
+                    <div style="margin-top:8px;">
+                        <a href="/colecciones/desastres-naturales/hechos" class="btn btn-primary">Ver Hechos</a>
+                        <a href="/colecciones/desastres-naturales/mapa" class="btn btn-secondary">Ver en Mapa</a>
                     </div>
-
                 </div>
             </div>
-
         </div>
 
         <div class="hechos-destacados">
+
             <!-- Hecho 1: Incendio forestal -->
             <div class="hecho-destacado">
                 <div class="hecho-header">
@@ -196,7 +203,7 @@
                     <div class="hecho-category category-incendio">Incendio forestal</div>
                     <div class="hecho-status">
                         <div class="consensus-indicator">
-                            <div class="consensus-dot consensus-verified"></div>
+                            <div class="consensus-dot consensus-verified" style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#28a745;margin-right:6px;"></div>
                             <span>Verificado por consenso</span>
                         </div>
                     </div>
@@ -207,29 +214,28 @@
                         Las llamas han consumido aproximadamente 1,200 hectáreas de bosque nativo de lenga y ñire.
                         Equipos especializados trabajan en la extinción desde las primeras horas.
                     </p>
-                    <div class="hecho-meta">
+                    <div class="hecho-meta d-flex gap-3 flex-wrap">
                         <div class="meta-item">
-                            <span class="meta-label">Fecha</span>
+                            <span class="meta-label">Fecha</span><br/>
                             <span class="meta-value">12 ago, 2025</span>
                         </div>
                         <div class="meta-item">
-                            <span class="meta-label">Ubicación</span>
+                            <span class="meta-label">Ubicación</span><br/>
                             <span class="meta-value">Santa Cruz</span>
                         </div>
                         <div class="meta-item">
-                            <span class="meta-label">Estado</span>
+                            <span class="meta-label">Estado</span><br/>
                             <span class="meta-value">Activo</span>
                         </div>
                         <div class="meta-item">
-                            <span class="meta-label">Actualizado</span>
+                            <span class="meta-label">Actualizado</span><br/>
                             <span class="meta-value">hace 3 min</span>
                         </div>
                     </div>
                 </div>
                 <div class="hecho-footer">
-                    <a href="../hechosYColecciones/detalleHecho.html" class="btn-hecho btn-hecho-primary">Ver
-                        Detalle</a>
-                    <a href="#" class="btn-hecho btn-hecho-secondary">Ver en Mapa</a>
+                    <a href="../hechosYColecciones/detalleHecho.html" class="btn btn-primary">Ver Detalle</a>
+                    <button class="btn btn-secondary ver-en-mapa" data-id="1">Ver en Mapa</button>
                 </div>
             </div>
 
@@ -240,7 +246,7 @@
                     <div class="hecho-category category-accidente">Accidente vial</div>
                     <div class="hecho-status">
                         <div class="consensus-indicator">
-                            <div class="consensus-dot consensus-verified"></div>
+                            <div class="consensus-dot consensus-verified" style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#28a745;margin-right:6px;"></div>
                             <span>Verificado por consenso</span>
                         </div>
                     </div>
@@ -251,39 +257,39 @@
                         de Rosario. Las condiciones de visibilidad reducida por niebla contribuyeron al siniestro.
                         Se reportan 2 víctimas fatales y 6 heridos.
                     </p>
-                    <div class="hecho-meta">
+                    <div class="hecho-meta d-flex gap-3 flex-wrap">
                         <div class="meta-item">
-                            <span class="meta-label">Fecha</span>
+                            <span class="meta-label">Fecha</span><br/>
                             <span class="meta-value">15 ago, 2025</span>
                         </div>
                         <div class="meta-item">
-                            <span class="meta-label">Ubicación</span>
+                            <span class="meta-label">Ubicación</span><br/>
                             <span class="meta-value">Santa Fe</span>
                         </div>
                         <div class="meta-item">
-                            <span class="meta-label">Estado</span>
+                            <span class="meta-label">Estado</span><br/>
                             <span class="meta-value">Finalizado</span>
                         </div>
                         <div class="meta-item">
-                            <span class="meta-label">Actualizado</span>
+                            <span class="meta-label">Actualizado</span><br/>
                             <span class="meta-value">hace 1 hora</span>
                         </div>
                     </div>
                 </div>
                 <div class="hecho-footer">
-                    <a href="#" class="btn-hecho btn-hecho-primary">Ver Detalle</a>
-                    <a href="#" class="btn-hecho btn-hecho-secondary">Ver en Mapa</a>
+                    <a href="#" class="btn btn-primary">Ver Detalle</a>
+                    <button class="btn btn-secondary ver-en-mapa" data-id="2">Ver en Mapa</button>
                 </div>
             </div>
 
-            <!-- Hecho 3: Desaparición -->
+            <!-- Hecho 3: Derrame químico -->
             <div class="hecho-destacado">
                 <div class="hecho-header">
                     <h3 class="hecho-title">Derrame químico en fábrica industrial de Córdoba</h3>
                     <div class="hecho-category category-desaparicion">Accidente ambiental</div>
                     <div class="hecho-status">
                         <div class="consensus-indicator">
-                            <div class="consensus-dot consensus-unverified"></div>
+                            <div class="consensus-dot consensus-unverified" style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#ffc107;margin-right:6px;"></div>
                             <span>En proceso de verificación</span>
                         </div>
                     </div>
@@ -293,40 +299,309 @@
                         Reporte de un derrame de sustancias químicas en una planta industrial ubicada en las afueras de
                         Córdoba.
                         Vecinos informaron fuertes olores y presencia de humo. Autoridades ambientales y de emergencias
-                        trabajan
-                        en la zona para contener la situación y evaluar riesgos a la salud pública.
+                        trabajan en la zona para contener la situación y evaluar riesgos a la salud pública.
                     </p>
-                    <div class="hecho-meta">
+                    <div class="hecho-meta d-flex gap-3 flex-wrap">
                         <div class="meta-item">
-                            <span class="meta-label">Fecha</span>
+                            <span class="meta-label">Fecha</span><br/>
                             <span class="meta-value">10 ago, 2025</span>
                         </div>
                         <div class="meta-item">
-                            <span class="meta-label">Ubicación</span>
+                            <span class="meta-label">Ubicación</span><br/>
                             <span class="meta-value">Córdoba</span>
                         </div>
                         <div class="meta-item">
-                            <span class="meta-label">Estado</span>
+                            <span class="meta-label">Estado</span><br/>
                             <span class="meta-value">Activo</span>
                         </div>
                         <div class="meta-item">
-                            <span class="meta-label">Actualizado</span>
+                            <span class="meta-label">Actualizado</span><br/>
                             <span class="meta-value">hace 2 horas</span>
                         </div>
                     </div>
                 </div>
                 <div class="hecho-footer">
-                    <a href="#" class="btn-hecho btn-hecho-primary">Ver Detalle</a>
-                    <a href="#" class="btn-hecho btn-hecho-secondary">Ver en Mapa</a>
+                    <a href="#" class="btn btn-primary">Ver Detalle</a>
+                    <button class="btn btn-secondary ver-en-mapa" data-id="3">Ver en Mapa</button>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
 
-    <footer>
+    <footer class="container">
         <p>© 2025 MetaMapa - <a href="privacidad.html"> Información Legal & Privacidad</a></p>
     </footer>
+
+    <div class="modal fade" id="detalleModal" tabindex="-1" aria-labelledby="detalleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="detalleModalLabel">Detalle del Hecho</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body detalle-modal-body" id="detalleModalBody">
+            <p>Cargando...</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <a id="btnIrADetalle" href="#" class="btn btn-primary">Ir a la página de detalle</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <script>
+        // ======== HECHOS HARDCODEADOS ========
+        const hechos = [
+          {
+            id: 1,
+            titulo: 'Incendio en Parque Nacional Los Glaciares',
+            descripcion: 'Incendio de gran magnitud detectado en el sector norte del Parque Nacional Los Glaciares (Santa Cruz).',
+            fecha: '2025-08-12',
+            ubicacion: 'Parque Nacional Los Glaciares, Santa Cruz',
+            estado: 'Activo',
+            actualizado: 'hace 3 min',
+            lat: -49.3340,
+            lng: -72.2800,
+            detalleUrl: '../hechosYColecciones/detalleHecho.html'
+          },
+          {
+            id: 2,
+            titulo: 'Accidente múltiple en Ruta Nacional 9 (Rosario)',
+            descripcion: 'Colisión múltiple involucrando 4 vehículos en el km 847 de la RN9.',
+            fecha: '2025-08-15',
+            ubicacion: 'Rosario, Santa Fe',
+            estado: 'Finalizado',
+            actualizado: 'hace 1 hora',
+            lat: -32.9546,
+            lng: -60.6939,
+            detalleUrl: '#'
+          },
+          {
+            id: 3,
+            titulo: 'Derrame químico en fábrica industrial de Córdoba',
+            descripcion: 'Reporte de derrame de sustancias químicas en planta industrial en las afueras de Córdoba.',
+            fecha: '2025-08-10',
+            ubicacion: 'Córdoba, Provincia de Córdoba',
+            estado: 'En verificación',
+            actualizado: 'hace 2 horas',
+            lat: -31.4201,
+            lng: -64.1888,
+            detalleUrl: '#'
+          },
+          {
+            id: 4,
+            titulo: 'Manifestación masiva en Plaza de Mayo',
+            descripcion: 'Concentración y manifestación con cortes parciales en la zona céntrica.',
+            fecha: '2025-09-02',
+            ubicacion: 'Ciudad Autónoma de Buenos Aires',
+            estado: 'Finalizado',
+            actualizado: 'hace 2 horas',
+            lat: -34.6083,
+            lng: -58.3712,
+            detalleUrl: '#'
+          },
+          {
+            id: 5,
+            titulo: 'Corte de suministro eléctrico en La Plata',
+            descripcion: 'Falla en transformador que dejó sin luz varios barrios céntricos.',
+            fecha: '2025-09-03',
+            ubicacion: 'La Plata, Provincia de Buenos Aires',
+            estado: 'Resuelto',
+            actualizado: 'hace 30 min',
+            lat: -34.9214,
+            lng: -57.9545,
+            detalleUrl: '#'
+          },
+          {
+            id: 6,
+            titulo: 'Inundación por tormenta en Mar del Plata',
+            descripcion: 'Anegamientos en barrios bajos por intensa lluvia y desborde de desagües.',
+            fecha: '2025-07-28',
+            ubicacion: 'Mar del Plata, Buenos Aires',
+            estado: 'En seguimiento',
+            actualizado: 'hace 6 horas',
+            lat: -38.0055,
+            lng: -57.5426,
+            detalleUrl: '#'
+          },
+          {
+            id: 7,
+            titulo: 'Deslizamiento en Mendoza',
+            descripcion: 'Pequeño deslizamiento en ruta provincial que interrumpe tránsito local.',
+            fecha: '2025-08-20',
+            ubicacion: 'Mendoza, Mendoza',
+            estado: 'Activo',
+            actualizado: 'hace 1 hora',
+            lat: -32.8895,
+            lng: -68.8458,
+            detalleUrl: '#'
+          },
+          {
+            id: 8,
+            titulo: 'Incidente de salud pública en Salta',
+            descripcion: 'Aumento de consultas por gastroenteritis en un barrio periférico.',
+            fecha: '2025-08-30',
+            ubicacion: 'Salta, Salta',
+            estado: 'En verificación',
+            actualizado: 'hace 4 horas',
+            lat: -24.7821,
+            lng: -65.4232,
+            detalleUrl: '#'
+          },
+          {
+            id: 9,
+            titulo: 'Choque múltiple en San Miguel de Tucumán',
+            descripcion: 'Varios vehículos involucrados, intervención de emergencias.',
+            fecha: '2025-09-01',
+            ubicacion: 'San Miguel de Tucumán, Tucumán',
+            estado: 'Finalizado',
+            actualizado: 'hace 20 min',
+            lat: -26.8083,
+            lng: -65.2176,
+            detalleUrl: '#'
+          },
+          {
+            id: 10,
+            titulo: 'Corte de ruta por obras en Neuquén',
+            descripcion: 'Desvío temporal y obras de mantenimiento en la RN con retardos.',
+            fecha: '2025-08-25',
+            ubicacion: 'Neuquén, Neuquén',
+            estado: 'En curso',
+            actualizado: 'hace 3 horas',
+            lat: -38.9517,
+            lng: -68.0599,
+            detalleUrl: '#'
+          },
+          {
+            id: 11,
+            titulo: 'Incidente marítimo cercano a Ushuaia',
+            descripcion: 'Aviso por embarcación averiada; Prefectura realiza apoyo.',
+            fecha: '2025-08-05',
+            ubicacion: 'Ushuaia, Tierra del Fuego',
+            estado: 'Resuelto',
+            actualizado: 'hace 1 día',
+            lat: -54.8019,
+            lng: -68.3030,
+            detalleUrl: '#'
+          },
+          {
+            id: 12,
+            titulo: 'Accidente vial en Bahía Blanca',
+            descripcion: 'Choque en avenida principal; cortes y desvíos momentáneos.',
+            fecha: '2025-09-04',
+            ubicacion: 'Bahía Blanca, Buenos Aires',
+            estado: 'Finalizado',
+            actualizado: 'hace 10 min',
+            lat: -38.7230,
+            lng: -62.2686,
+            detalleUrl: '#'
+          },
+          {
+            id: 13,
+            titulo: 'Inundaciones en Corrientes',
+            descripcion: 'Suba de nivel en ríos que afecta zonas ribereñas y exige evacuaciones.',
+            fecha: '2025-08-18',
+            ubicacion: 'Corrientes, Corrientes',
+            estado: 'Activo',
+            actualizado: 'hace 45 min',
+            lat: -27.4806,
+            lng: -58.8342,
+            detalleUrl: '#'
+          }
+        ];
+
+        // ======= Inicializar mapa Leaflet =======
+        const map = L.map('map').setView([-34.626, -58.426], 5); // vista inicial para mostrar varios puntos
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // marcador por cada hecho
+        const markers = {};
+        hechos.forEach(h => {
+          const mk = L.marker([h.lat, h.lng]).addTo(map);
+
+          // contenido del popup (botón con id único para poder capturar el click)
+          const popupHtml = `
+            <div>
+              <div class="popup-title">${h.titulo}</div>
+              <div style="font-size:0.9rem; margin-bottom:6px;">${h.ubicacion} • ${h.fecha}</div>
+              <div style="font-size:0.85rem; margin-bottom:8px;">${h.descripcion}</div>
+              <button id="popupBtn-${h.id}" class="btn btn-sm btn-primary">Ver detalles</button>
+            </div>
+          `;
+          mk.bindPopup(popupHtml);
+
+          // cuando el popup se abre, agrego el event listener al botón dentro del popup
+          mk.on('popupopen', () => {
+            // el DOM del popup se inyecta, así que podemos buscar el botón por id
+            const btn = document.getElementById(`popupBtn-${h.id}`);
+            if (btn) {
+              btn.addEventListener('click', (ev) => {
+                ev.preventDefault();
+                abrirDetalleModal(h);
+              });
+            }
+          });
+
+          // también al click del marcador centro y dejo el popup
+          mk.on('click', () => {
+            map.setView([h.lat, h.lng], 12, { animate: true });
+          });
+
+          markers[h.id] = mk;
+        });
+
+        // ======= Función para abrir modal con detalles =======
+        function abrirDetalleModal(h) {
+          const body = document.getElementById('detalleModalBody');
+          body.innerHTML = `
+            <h5>${h.titulo}</h5>
+            <p><strong>Fecha:</strong> ${h.fecha}</p>
+            <p><strong>Ubicación:</strong> ${h.ubicacion}</p>
+            <p><strong>Estado:</strong> ${h.estado}</p>
+            <p>${h.descripcion}</p>
+            <p><strong>Última actualización:</strong> ${h.actualizado}</p>
+            <p><strong>Coordenadas:</strong> ${h.lat.toFixed(6)}, ${h.lng.toFixed(6)}</p>
+          `;
+          const btnIr = document.getElementById('btnIrADetalle');
+          btnIr.href = h.detalleUrl || '#';
+
+          // mostrar modal (Bootstrap)
+          const modalEl = document.getElementById('detalleModal');
+          const modal = new bootstrap.Modal(modalEl);
+          modal.show();
+        }
+
+        // ======= Botones "Ver en Mapa" en las cards =======
+        document.querySelectorAll('.ver-en-mapa').forEach(btn => {
+          btn.addEventListener('click', (ev) => {
+            const id = parseInt(btn.getAttribute('data-id'));
+            const h = hechos.find(x => x.id === id);
+            if (!h) return;
+            map.setView([h.lat, h.lng], 12, { animate: true });
+            // abrir el popup del marcador
+            if (markers[id]) markers[id].openPopup();
+            // opcional: abrir el modal con detalle
+            // abrirDetalleModal(h);
+          });
+        });
+
+        // ======= Ejemplo: si en el futuro cargás desde backend, reemplazar hechos por fetch =======
+        /*
+        fetch('/api/hechos?limit=100')
+          .then(r => r.json())
+          .then(data => {
+             // reasignar hechos, crear/actualizar marcadores, etc.
+          })
+        */
+    </script>
 </body>
 
 </html>
