@@ -66,20 +66,21 @@
           <div class="subsection">
             <h3 class="subsection-title">Fuentes</h3>
             <div id="fuentes-container">
+              <!-- fila de fuente -->
               <div class="dynamic-field">
-                <div class="field-group">
-                  <input type="text" name="fuentes[]" class="form-input"
-                         placeholder="URL de la fuente">
-                  <button type="button" class="btn-remove-field" >
-                    <i class="fas fa-times"></i>
-                  </button>
+                <div class="form-row fuentes-row">
+                  <div class="form-group">
+                    <select class="form-select fact-category" type="button" name="tipoFuente[]">
+                      <option selected>ESTÁTICA</option>
+                      <option value="DINAMICA">DINÁMICA</option>
+                      <option value="PROXY">PROXY</option>
+                    </select>
+                  </div>
+
                 </div>
               </div>
             </div>
-            <button type="button" class="btn-add-field" >
-              <i class="fas fa-plus"></i>
-              Añadir Fuentes
-            </button>
+
           </div>
 
           <div class="subsection">
@@ -141,18 +142,18 @@
 
         <!-- Form Actions -->
         <div class="form-actions">
-          <button type="button" class="btn-cancel">
+          <a href="panelControl.html" class="btn-cancel">
             <i class="fas fa-times"></i>
             Cancelar
-          </button>
-          <button type="button" class="btn-draft">
+          </a>
+          <a href="panelControl.html" class="btn-draft">
             <i class="fas fa-save"></i>
             Guardar como Borrador
-          </button>
-          <button type="submit" class="btn-create">
+          </a>
+          <a href="panelControl.html" class="btn-create">
             <i class="fas fa-check"></i>
-            Crear Colección
-          </button>
+            Crear Cambios
+          </a>
         </div>
       </form>
     </div>
