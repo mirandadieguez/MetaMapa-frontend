@@ -76,6 +76,7 @@ header .logo {
 .admin-layout {
     display: flex;
     min-height: calc(100vh - 80px);
+    min-width: fit-content;
 }
 
 /* Sidebar */

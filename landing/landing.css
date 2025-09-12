@@ -168,13 +168,13 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-.coleccion-destacada {
-    background-color: #f7f9fa;
-    padding: 20px;
-    border: 1px solid #9196a1;
+.coleccion-destacada{
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.coleccion-destacada :hover {
+.coleccion-destacada:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
     cursor: pointer;
 }
 

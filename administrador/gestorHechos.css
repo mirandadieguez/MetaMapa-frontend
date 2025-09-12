@@ -12,6 +12,7 @@ body {
 div.container{
     margin: 0 auto;   /* opcional */
     width: 100%;
+    padding: 0;
 }
 
 
@@ -85,7 +86,7 @@ header .logo {
 }
 /* Sidebar */
 .admin-sidebar {
-    width: 260px;
+    width: 260px !important;
     background: white;
     box-shadow: 2px 0 4px rgba(0,0,0,0.05);
     border-right: 1px solid #e8e8e8;
@@ -94,8 +95,10 @@ header .logo {
 
 .admin-shell{
     display: flex;
-    width: 100%;
+    
     min-height: calc(100vh - 72px);  /* alto aprox restando header */
+    margin: 0 !important;
+    min-width: fit-content;
 }
 
 .sidebar-nav ul {
