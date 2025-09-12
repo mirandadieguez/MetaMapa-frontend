@@ -31,7 +31,12 @@ header .logo {
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 12px;
+}
+
+
+.update-button{
+    margin: 20px;
 }
 
 .btn-notification {
@@ -41,6 +46,7 @@ header .logo {
     font-size: 1.2rem;
     cursor: pointer;
     position: relative;
+    padding: 0;
 }
 
 .notification-count {
