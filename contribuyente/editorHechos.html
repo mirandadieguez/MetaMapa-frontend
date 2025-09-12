@@ -6,8 +6,13 @@
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <meta charset="UTF-8">
+    <title>Editor de Hechos - MetaMapa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/header.css">
+
     <link rel="stylesheet" href="editorHechos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-p8f1X+zvN0..." crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,30 +24,33 @@
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="logo">🌍 MetaMapa</div>
-        <div class="header-admin-info">
-            <div class="header-actions">
-                <button class="btn-notification">
-                    <i class="fas fa-bell"></i>
-                    <span class="notification-count">3</span>
-                </button>
-                <div class="dropdown">
-                    <button class="user-menu" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="fas fa-user-circle"></i>
-                        <span>User</span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" href="./misHechos.html">Mis Hechos</a></li>
-                        <li><a class="dropdown-item" href="../hechosYColecciones/formularioHecho.html">Subir Hecho</a></li>
-                        <li><a class="dropdown-item" href="../landing/landing.html">Cerrar sesión</a></li>
-                    </ul>
-                </div>
+    <header class="main-header main-header--contrib">
+  <a class="logo" href="/landing/landing.html" aria-label="Ir al inicio">🌍 MetaMapa</a>
 
-            </div>
-        </div>
-    </header>
+  <!-- nav opcional para accesos rápidos de admin; si no lo usás, déjalo vacío -->
+  <nav class="admin-nav"></nav>
+
+  <div class="header-admin-info">
+    <div class="header-actions">
+      <button class="btn-notification" aria-label="Notificaciones">
+        <i class="fas fa-bell"></i>
+        <span class="notification-count">3</span>
+      </button>
+
+      <div class="dropdown">
+        <button class="user-menu" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+          <i class="fas fa-user-circle"></i>
+          <span>User</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="./misHechos.html">Mis Hechos</a></li>
+          <li><a class="dropdown-item" href="../hechosYColecciones/formularioHecho.html">Subir Hecho</a></li>
+          <li><a class="dropdown-item" href="../landing/landing.html">Cerrar sesión</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
     <main>
         <div class="container">
             <!-- Breadcrumb -->

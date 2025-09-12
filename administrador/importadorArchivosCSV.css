@@ -1,12 +1,12 @@
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      /*font-family: Arial, sans-serif;*/
       color: #333;
       background-color: #f8fafc;
     }
 
     /* Header principal */
-    header.main-header {
+    /*header.main-header {
       background: #004080;
       color: #fff;
       padding: 1rem;
@@ -69,7 +69,7 @@
 
     .user-menu:hover {
       background: rgba(255, 255, 255, 0.1);
-    }
+    }*/
 
     .container {
       max-width: 1200px;

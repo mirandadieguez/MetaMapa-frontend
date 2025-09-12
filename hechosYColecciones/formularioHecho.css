@@ -1,11 +1,11 @@
 /* ======= Base ======= */
 body {
-    font-family: Arial, sans-serif;
+    /*font-family: Arial, sans-serif;*/
     background-color: #f5f6fa;
 }
 
 /* ======= Header ======= */
-header.main-header {
+/*header.main-header {
     background: #004080;
     color: #fff;
     padding: 1rem;
@@ -14,7 +14,7 @@ header.main-header {
     align-items: center;
 
     /* responsive: permite que el nav baje debajo del logo */
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;
     row-gap: .5rem;
 }
 
@@ -30,7 +30,7 @@ nav ul {
     margin-bottom: 0;
 
     /* responsive: permite que los items salten de línea si no entran */
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;
 }
 
 nav a {
