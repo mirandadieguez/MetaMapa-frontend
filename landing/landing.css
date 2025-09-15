@@ -38,12 +38,12 @@ nav a:hover {
 }*/
 
 /* ===== Footer ===== */
-.site-footer{
+/*.site-footer{
     background:#CDD0D4;
     border-top:1px solid #e5e7eb;
     padding:32px 0;
     color:#111827;                 /* texto gris azulado */
-    font-size:14px;
+    /*font-size:14px;
 }
 
 .footer-container{
@@ -60,7 +60,7 @@ nav a:hover {
     font-size:18px;
     font-weight:600;
     color:#111827;                 /* títulos más oscuros */
-}
+/*}
 
 .site-footer ul{
     list-style:none;
@@ -112,7 +112,7 @@ nav a:hover {
 .socials i{ font-size:16px; color:#334155; }
 
 /* Responsive */
-@media (max-width: 900px){
+/*@media (max-width: 900px){
     .footer-container{ grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width: 520px){
@@ -494,13 +494,9 @@ nav a:hover {
     }
 }
 
-.mapa-interactivo {
+.mapa-interactivo {  
     display: flex;
     justify-content: center;
-
-}
-
-.mapa-interactivo {
     margin: 24px 0;
     max-width: 1200px;
     margin-left: auto;

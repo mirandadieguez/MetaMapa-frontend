@@ -22,3 +22,12 @@ body{
 
 /* Navegación base */
 nav ul{ list-style: none; margin: 0; padding: 0; }
+
+.page-shell{
+  min-height:100dvh;     
+  display:flex;
+  flex-direction:column;
+}
+.page-shell > main{
+  flex:1 0 auto;        
+}
