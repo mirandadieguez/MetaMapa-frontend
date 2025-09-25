@@ -1,33 +1,16 @@
 /* ==== base.css ==== */
 /* Reset suave */
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+
 
 /* Variables y tipografía base */
 :root{
   --color-brand: #004080;
   --text-color: #333;
-  --header-min-height: 64px;
-  --header-pad-y: 12px;
-  --header-pad-x: 16px;
-  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
 
-body{
-  font-family: var(--font-ui);
-  color: #333;
-  line-height: 1.5;
-  margin: 0;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Navegación base */
 nav ul{ list-style: none; margin: 0; padding: 0; }
 
-.page-shell{
-  min-height:100dvh;     
-  display:flex;
-  flex-direction:column;
-}
-.page-shell > main{
-  flex:1 0 auto;        
-}
+

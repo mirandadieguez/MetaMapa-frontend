@@ -36,8 +36,8 @@
         <h5 class="landing-subtitle">MetaMapa le permite organizar, analizar y visualizar <br>
             información geoespacial como nunca antes.</h5>
         <div class="call-to-action-buttons">
-            <button class="btn-login" onclick="location.href='../authentication/signup.html'">Registrarse</button>
-            <button class="btn-signup" onclick="location.href='../authentication/login.html'">Iniciar sesión</button>
+            <button class="btn-signup" onclick="location.href='../authentication/signup.html'">Registrarse</button>
+            <button class="btn-login" onclick="location.href='../authentication/login.html'">Iniciar sesión</button>
             <a href="../hechosYColecciones/exploradorColecciones.html" class="btn-explorar">Explorar Colecciones</a>
         </div>
     </div>
@@ -45,7 +45,7 @@
     <section id="propositos-objetivos" aria-labelledby="pm-title" class="pm-section">
         <div class="pm-container">
             <div class="pm-left">
-                <h2 id="pm-title"><i class="fa-solid fa-location-pin pm-icon"></i> Nuestro Propósito</h2>
+                <h2 id="pm-title" style="display: flex;">Nuestro Propósito<i class="fa-solid fa-location-pin pm-icon"></i></h2>
                 <p class="pm-purpose">
                     MetaMapa potencia la inteligencia colectiva para transformar aportes individuales en
                     información georreferenciada y multimedia fiable. Ordenamos, etiquetamos y situamos
@@ -60,7 +60,7 @@
             <div class="pm-divider" aria-hidden="true"></div>
 
             <div class="pm-right" role="list" aria-label="Objetivos principales">
-                <h2 class="pm-right-title"><i class="fa-solid fa-bullseye pm-icon"></i> Nuestros Objetivos</h2>
+                <h2 class="pm-right-title" style="display: flex;">Nuestros Objetivos<i class="fa-solid fa-bullseye pm-icon"></i></h2>
 
                 <article class="pm-item" role="listitem">
                     <div class="pm-icon" aria-hidden="true">
@@ -140,7 +140,7 @@
                         <small>Última actualización: hace 30 minutos</small>
                     </div>
                     <div style="margin-top:8px;">
-                        <a href="../hechosYColecciones/detalleColeccion.html" class="btn btn-primary">Ver Hechos</a>
+                        <a href="../hechosYColecciones/detalleColeccion.html" class="btn btn-signup">Ver Hechos</a>
                         <a href="/colecciones/incendios-forestales-2025/mapa" class="btn btn-secondary">Ver en Mapa</a>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
                         <small>Última actualización: hace 2 horas</small>
                     </div>
                     <div style="margin-top:8px;">
-                        <a href="/colecciones/desapariciones-odio/hechos" class="btn btn-primary">Ver Hechos</a>
+                        <a href="/colecciones/desapariciones-odio/hechos" class="btn btn-signup">Ver Hechos</a>
                         <a href="/colecciones/desapariciones-odio/mapa" class="btn btn-secondary">Ver en Mapa</a>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
                         <small>Última actualización: hace 1 día</small>
                     </div>
                     <div style="margin-top:8px;">
-                        <a href="/colecciones/muertes-viales-argentina/hechos" class="btn btn-primary">Ver Hechos</a>
+                        <a href="/colecciones/muertes-viales-argentina/hechos" class="btn btn-signup">Ver Hechos</a>
                         <a href="/colecciones/muertes-viales-argentina/mapa" class="btn btn-secondary">Ver en Mapa</a>
                     </div>
                 </div>
@@ -188,7 +188,7 @@
                         <small>Última actualización: hace 3 horas</small>
                     </div>
                     <div style="margin-top:8px;">
-                        <a href="/colecciones/desastres-naturales/hechos" class="btn btn-primary">Ver Hechos</a>
+                        <a href="/colecciones/desastres-naturales/hechos" class="btn btn-signup">Ver Hechos</a>
                         <a href="/colecciones/desastres-naturales/mapa" class="btn btn-secondary">Ver en Mapa</a>
                     </div>
                 </div>
@@ -235,7 +235,7 @@
                     </div>
                 </div>
                 <div class="hecho-footer">
-                    <a href="../hechosYColecciones/detalleHecho.html" class="btn btn-primary">Ver Detalle</a>
+                    <a href="../hechosYColecciones/detalleHecho.html" class="btn btn-signup">Ver Detalle</a>
                     <button class="btn btn-secondary ver-en-mapa" data-id="1">Ver en Mapa</button>
                 </div>
             </div>
@@ -278,7 +278,7 @@
                     </div>
                 </div>
                 <div class="hecho-footer">
-                    <a href="#" class="btn btn-primary">Ver Detalle</a>
+                    <a href="#" class="btn btn-signup">Ver Detalle</a>
                     <button class="btn btn-secondary ver-en-mapa" data-id="2">Ver en Mapa</button>
                 </div>
             </div>
@@ -322,7 +322,7 @@
                     </div>
                 </div>
                 <div class="hecho-footer">
-                    <a href="#" class="btn btn-primary">Ver Detalle</a>
+                    <a href="#" class="btn btn-signup">Ver Detalle</a>
                     <button class="btn btn-secondary ver-en-mapa" data-id="3">Ver en Mapa</button>
                 </div>
             </div>
@@ -330,19 +330,19 @@
         </div>
     </div>
 
-    <!--<footer class="site-footer">
-        <div class="footer-container">-->
+    <footer class="site-footer">
+        <div class="footer-container">
             <!-- Columna 1 -->
-            <!--<div class="footer-col">
+            <div class="footer-col">
                 <h4>Información</h4>
                 <ul>
                     <li><a href="privacidad.html">Información Legal & Privacidad</a></li>
                     <li><a href="#">Preguntas Frecuentes</a></li>
                 </ul>
-            </div>-->
+            </div>
 
             <!-- Columna 2 -->
-            <!--<div class="footer-col">
+            <div class="footer-col">
                 <h4>Contacto</h4>
                 <ul class="contact-list">
                     <li><i class="fa-regular fa-envelope"></i>
@@ -353,26 +353,26 @@
                     </li>
                     <li class="muted">Horario: Lunes - Viernes, 9:00 - 17:00</li>
                 </ul>
-            </div>-->
+            </div>
 
             <!-- Columna 3 -->
-            <!--<div class="footer-col">
+            <div class="footer-col">
                 <h4>Seguinos</h4>
                 <div class="socials">
                     <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-            </div>-->
+            </div>
 
             <!-- Columna 4 -->
-            <!--<div class="footer-col">
+            <div class="footer-col">
                 <h4>MetaMapa</h4>
                 <p class="about">Ofreciendo soluciones innovadoras para un futuro conectado.</p>
                 <p class="muted">© 2025 MetaMapa. Todos los derechos reservados.</p>
             </div>
         </div>
-    </footer>-->
+    </footer>
 
     <div class="modal fade" id="detalleModal" tabindex="-1" aria-labelledby="detalleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">

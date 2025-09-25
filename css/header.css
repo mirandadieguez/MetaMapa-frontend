@@ -22,8 +22,9 @@ header .logo{
   line-height:1.2;
   color:#fff;
   text-decoration:none;
+  transition: 1s;
 }
-header .logo:hover{ opacity:.9; }
+header .logo:hover{ opacity:.9; transition: 1s; }
 
 
 /* Nav público clásico */
@@ -35,13 +36,14 @@ header.main-header nav ul{
   padding:0;
 }
 header.main-header nav a{
+  font-weight: 500;
   color:#fff; 
   text-decoration:none; 
   padding:.5rem .75rem; 
   border-radius:6px;
-  transition:background-color .15s ease;
+  transition:1s;
 }
-header.main-header nav a:hover{ background:rgba(255,255,255,.12); }
+header.main-header nav a:hover{ background:rgba(255,255,255,.12); transition: 1s; }
 
 /* ======= Bloque acciones (campana + usuario) ======= */
 .header-actions{

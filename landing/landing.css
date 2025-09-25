@@ -2,6 +2,14 @@ body {
     margin: 0;
   /*  font-family: Arial, sans-serif; */
     color: #333;
+
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*header.main-header {
@@ -121,7 +129,6 @@ nav a:hover {
 }
 
 /* ----------------------------------------- */
-
 .landing-title {
     font-size: 45px;
     text-align: center;
@@ -130,34 +137,79 @@ nav a:hover {
 
 .landing-subtitle {
     text-align: center;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 .landing-banner {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 0px 100px 0px;
-    background-color: #f7f9fa;
+    padding: 100px 0;
     gap: 15px;
+    background-color: black; /* fondo base */
+    overflow: hidden;
+    color: white;
+    width: 100%;
+}
+
+.landing-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* ocupa todo el banner */
+    background-image: url(https://cdn.pixabay.com/photo/2017/08/17/07/47/travel-2650303_960_720.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4; 
+    z-index: 0; 
+}
+
+.landing-banner > * {
+    position: relative;
+    z-index: 1; /* el contenido queda encima de la imagen */
 }
 
 .call-to-action-buttons button {
-    border-radius: none;
+    border-radius: 15px;
     padding: 10px 20px;
     margin: 0px 5px;
     cursor: pointer;
     border: none;
+    font-weight: 500;
+}
+
+.btn-signup {
+    background-color: #004080;
+    color: #fff;
+    transition: 1s;
+}
+
+.btn-signup:hover{
+    background-color: #15259c;
+    color: #fff;
 }
 
 .btn-login {
-    background-color: #333;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
+    transition: 1s;
+}
+
+.btn-login:hover{
+    background-color: #c4c4c4;
+    color: #000000;
 }
 
 .btn-explorar {
     background-color: transparent;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 1s;
+    color:#ffffff;
+}
 
+.btn-explorar:hover{
+    color: #bdbbbb;
 }
 
 .colecciones-destacadas {
@@ -380,6 +432,7 @@ nav a:hover {
     padding: 48px 20px;
     color: #0f172a;
     font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    width: 100%;
 }
 
 .pm-container {
@@ -427,6 +480,11 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#pm-title h2{
+    display: flex;
+    flex-direction: row;
 }
 
 .pm-text h4 {
