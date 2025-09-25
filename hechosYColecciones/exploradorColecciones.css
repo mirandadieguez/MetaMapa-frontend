@@ -110,6 +110,17 @@ main {
     font-size: 0.9rem;
     transition: background-color 0.3s;
 }
+.btn-ver-hechos {
+    background-color: #004080;
+    color: #fff;
+    transition: 1s;
+}
+
+.btn-ver-hechos:hover{
+    background-color: #041176;
+    color: #fff;
+}
+
 .btn-primary {
     background-color: #3498db;
     color: white;

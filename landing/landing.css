@@ -454,6 +454,10 @@ nav a:hover {
     min-width: 300px;
 }
 
+.pm-img{
+    height: max-content;
+}
+
 .pm-divider {
     width: 1px;
     background: linear-gradient(#e6eef0, #e6eef0);

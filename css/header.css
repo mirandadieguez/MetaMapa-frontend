@@ -10,6 +10,7 @@ header.main-header{
   box-shadow: 0 2px 4px rgba(0,0,0,.08);
   flex-wrap: wrap;             /* permite apilar en mobile */
   row-gap: .5rem;
+  width: 100%;
 }
 
 header .logo{

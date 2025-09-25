@@ -1,42 +1,11 @@
 /* ===== Base ===== */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f6fa;
-}
-
-/* ===== Header ===== */
-header.main-header {
-    background: #004080;
-    color: #fff;
-    padding: 1rem;
+body{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-
-    /* responsive: permite que los bloques bajen cuando no entran */
-    flex-wrap: wrap;
-    row-gap: .5rem;
 }
 
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color:#fff;
-    text-decoration:none;
-}
-
-.header-admin-info {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.header-actions {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
 
 .btn-notification {
     background: none;
@@ -93,15 +62,17 @@ main {
 
 .form-container {
     background-color: #fff;
-    padding: 10px 80px;
+    padding: 10px 40px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     height: fit-content;
-    width: 100%;
+    width: fit-content;
+    margin: 50px 0px;
 }
+
 
 .form-container h2 {
     text-align: center;
@@ -111,10 +82,6 @@ main {
 .form-group {
     background-color: white;
     padding: 10px 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-
     width: 100%;
     max-width: 420px;   /* ancho cómodo en desktop */
     margin: 0 auto;
@@ -138,20 +105,27 @@ main {
 
 .btn-submit {
     width: 100%;
-    padding: 12px;
-    background-color: #333;
+    display: inline-block;
+    min-width: 220px;               
+    padding: 12px 18px;
+    background-color: #004080;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 30px;
+    margin: 24px auto 0 auto;       
+    text-decoration: none;          
+    text-align: center;
+    transition: 1s;
 }
+
+
+
 
 .btn-submit:hover {
-    background-color: #555;
+    background-color: #15259c;
 }
-
 .logo-placeholder {
     font-size: 50px;
     margin-bottom: 10px;
@@ -188,6 +162,7 @@ main {
     padding:32px 0;
     color:#111827;
     font-size:14px;
+    width: 100%;
 }
 
 .footer-container{

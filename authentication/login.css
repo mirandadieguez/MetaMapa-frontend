@@ -1,31 +1,9 @@
 
-header.main-header {
-    background: #004080;
-    color: #fff;
-    padding: 1rem;
+body{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color:#fff;
-    text-decoration:none;
-}
-
-.header-admin-info {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.header-actions {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
 }
 
 .btn-notification {
@@ -80,23 +58,18 @@ body {
 
 }
 
-.contenedor{
-        /* antes: margin: 30px 400px; → rompe en mobile */
-        max-width: 900px;
-        margin: 30px auto;   /* centrado y fluido */
-        padding: 0 12px;     /* respiración lateral en pantallas chicas */
-    }
 
 .form-container {
     background-color: #fff;
-    padding: 10px 80px;
+    padding: 10px 40px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     height: fit-content;
-    width: 100%;
+    width: fit-content;
+    margin: 50px 0px;
 }
 
 .form-container h2 {
@@ -107,9 +80,6 @@ body {
 .form-group {
     background-color: white;
     padding: 10px 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 
     width: 100%;
     max-width: 420px;   /* ancho cómodo en desktop */
@@ -124,9 +94,6 @@ body {
     text-align: center;      /* centra el texto */
     display: inline-block;   /* mantiene tamaño del texto */
     width: 100%;             /* permite centrar dentro del form-group */
-}
-.form-group a:hover {
-    text-decoration: underline;
 }
 
 .form-group label {
@@ -149,7 +116,7 @@ body {
     display: inline-block;
     min-width: 220px;               /* opcional: ancho mínimo lindo */
     padding: 12px 18px;
-    background-color: #333;
+    background-color: #004080;
     color: white;
     border: none;
     border-radius: 6px;
@@ -158,10 +125,14 @@ body {
     margin: 24px auto 0 auto;       /* centrado */
     text-decoration: none;          /* por si usás <a class="btn-submit"> */
     text-align: center;
+    transition: 1s;
 }
 
+
+
+
 .btn-submit:hover {
-    background-color: #555;
+    background-color: #15259c;
 }
 
 .logo-placeholder {
@@ -200,6 +171,7 @@ body {
     padding:32px 0;
     color:#111827;                 /* texto gris azulado */
     font-size:14px;
+    width: 100%;
 }
 
 .footer-container{
