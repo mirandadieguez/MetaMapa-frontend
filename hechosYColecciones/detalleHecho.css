@@ -190,6 +190,23 @@ main {
     height: -webkit-fill-available;
 }
 
+/* Información Básica */
+.metadata-table {
+  width: 100%;
+  border-collapse: separate; /*agrego espacio entre celdas */
+
+}
+
+.metadata-table td {
+  padding: 4px 10px;
+  vertical-align: top;
+}
+
+.metadata-table td:first-child {
+  padding-right: 12px;       /* le agreggo mas espacio entre label y valor */
+}
+/* aca termina Información Básica */
+
 .info-card h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
