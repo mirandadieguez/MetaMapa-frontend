@@ -173,13 +173,30 @@
   </div>
 </footer>
 
+<!-- Libreria para descargar PDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" referrerpolicy="no-referrer"></script>
+
 <script>
   function downloadPDF() {
-    // Función simple para "descargar" - en realidad abre ventana de impresión
-    // Para una implementación real, necesitarías una biblioteca como jsPDF
-    alert('Función de descarga PDF - Para implementación completa se requiere biblioteca adicional');
-    window.print();
+    const element = document.querySelector('.privacy-container');
+    if (!element) {
+      alert('No encontré el contenedor .privacy-container');
+      return;
+    }
+
+    <!-- Aca se ajusta para que quede bien el PDF-->
+    const opt = {
+      margin:       [10, 10, 10, 10],
+      filename:     'Politica_de_Privacidad_MetaMapa.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2, useCORS: true, background: '#ffffff', scrollY: 0 },
+      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak:    { mode: ['css', 'legacy'] }
+    };
+
+    html2pdf().set(opt).from(element).save();
   }
 </script>
+
 </body>
 </html>
